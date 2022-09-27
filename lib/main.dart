@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../pages/StartPage.dart';
 
+const d_oronge = Color(0xFFFFA600);
+
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

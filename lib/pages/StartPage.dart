@@ -31,17 +31,17 @@ class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Center(
-          child: Text(
-              "Best Food",
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-        ),
-      ),
+      //appBar: AppBar(
+        //title: const Center(
+          //child: Text(
+            //  "TCHOP",
+            //style: TextStyle(
+              //fontSize: 30,
+              //fontWeight: FontWeight.w500,
+            //),
+          //),
+        //),
+      //),
       body: Center(child: _tabList.elementAt(_pageIndex)),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.grey,
