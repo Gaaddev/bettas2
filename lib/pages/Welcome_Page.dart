@@ -2,6 +2,7 @@ import 'package:bettas/main.dart';
 import 'package:flutter/material.dart';
 import 'package:bettas/animations/delayed_animation.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bettas/pages/SocialPage.dart';
 
 class WelcomePage extends StatelessWidget {
 
@@ -61,7 +62,9 @@ class WelcomePage extends StatelessWidget {
                       shape: StadiumBorder(),
                       padding: EdgeInsets.all(13),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SocialPage(),),);
+                    },
                     child: Text('GET STARTED'),
                   ),
                 ),
