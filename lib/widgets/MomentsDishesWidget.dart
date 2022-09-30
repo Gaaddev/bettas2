@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/MomentsDishesWidget.dart';
 import 'MomentsDishesTypes.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MomentsDishesWidget extends StatefulWidget {
   const MomentsDishesWidget({Key? key}) : super(key: key);
@@ -12,21 +13,13 @@ class MomentsDishesWidget extends StatefulWidget {
 class _MomentsDishesWidgetState extends State<MomentsDishesWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(2.0),
-      height: 420,
-      width: 400,
-      child: Column(
+    return Column(
         children: [
           MomentsDishesWidgetTitle(),
-          Container(
-            height: 400,
-              child: MomentsDishesModels(
+          MomentsDishesModels(
                  imageUrl: '',
               ),
-          ),
         ],
-      ),
     );
   }
 }
@@ -46,47 +39,121 @@ class MomentsDishesModels extends StatelessWidget {
         // Navigator.push(context, ScaleRoute(page: FoodDetailsPage())
         //);
       },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-         // SizedBox(
-           // height: 2,
-          //),
-          MomentsDishesTypes(),
-        //  Container(
-          //    alignment: Alignment.center,
-            // child:Align(
-              //   alignment: Alignment.centerRight,
-                //child: Center(
-                  //  child: Image.asset(
-                    //  'Images/grillades_plats.png',
-                      //width: 80,
-                      //height: 80,
-                    //),
-               //),
-           //),
-          //),
-         // SizedBox(
-           // height: 0,
-          //),
-          Container(
-            width: 350,
-            height: 300,
-            padding: const EdgeInsets.all(3.0),
-            child: Card(
-              color: Colors.white54,
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(7),
+      child: SingleChildScrollView(
+        child: Container(
+          height: 580,
+          margin: EdgeInsets.symmetric(
+            vertical: 5,
+            horizontal: 2,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+             // SizedBox(
+               // height: 2,
+              //),
+              MomentsDishesTypes(),
+              Container(
+                width: 350,
+                height: 250,
+                padding: const EdgeInsets.all(3.0),
+                child: Card(
+                  color: Colors.white54,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(7),
+                    ),
+                  ),
+                  child: Image.asset(
+                    'Kom.jpg',
+                  ),
                 ),
               ),
-                  child: Image.asset(
-                    'images/jollof_t.png',
+              Container(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 10,
+                ),
+                width: double.infinity,
+                height: 30,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      'Breakfast',
+                      style: GoogleFonts.poppins(
+                        color: Colors.black45,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                      width: 110,
+                    ),
+                    Card(
+                      color: Colors.white,
+                      //elevation: 0,
+                      child: Align(
+                        //alignment: Alignment.topRight,
+                        child: Container(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: const [
+                              Icon(
+                                Icons.stars,
+                                size: 20,
+                                color: Colors.amberAccent,
+                              ),
+                              Icon(
+                                Icons.stars,
+                                size: 20,
+                                color: Colors.amberAccent,
+                              ),
+                              Icon(
+                                Icons.stars,
+                                size: 20,
+                                color: Colors.amberAccent,
+                              ),
+                              Icon(
+                                Icons.stars,
+                                size: 20,
+                                color: Colors.amberAccent,
+                              ),
+                              Icon(
+                                Icons.stars,
+                                size: 20,
+                                color: Colors.amberAccent,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: 350,
+                height: 200,
+                padding: const EdgeInsets.all(3.0),
+                child: Card(
+                  color: Colors.white54,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(7),
+                    ),
                   ),
-            ),
+                      child: Image.asset(
+                        'Images/aloko.png',
+                      ),
+                ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

@@ -22,7 +22,7 @@ class WelcomePage extends StatelessWidget {
                 delay: 1500,
                 child: Container(
                   //color: Colors.blue,
-                  height: 170,
+                  height: 210,
                   child: Image.asset('TchopLogo.png'),
                 ),
               ),
@@ -30,7 +30,7 @@ class WelcomePage extends StatelessWidget {
                 delay: 2500,
                 child: Container(
                   //color: Colors.blue,
-                  height: 300,
+                  height: 350,
                   child: Image.asset('serveur1.png'),
                 ),
               ),
@@ -51,6 +51,9 @@ class WelcomePage extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 20,
               ),
               DelayedAnimation(
                 delay: 4500,

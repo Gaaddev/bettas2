@@ -11,13 +11,13 @@ class _MomentsDishesTypesState extends State<MomentsDishesTypes> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
+      height: 70,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           MomentsDishesType( imageUrl: 'Images/atieke_poisson.png', slug: ''),
           MomentsDishesType(imageUrl: 'Images/aloko.png', slug: ''),
-          MomentsDishesType( imageUrl: 'images/Images/aloko.png', slug: ''),
+          MomentsDishesType( imageUrl: 'Images/jollof_rice.png', slug: ''),
           MomentsDishesType(imageUrl: 'Images/grillades_plats.png', slug: ''),
           MomentsDishesType(imageUrl: 'Images/aloko.png', slug: ''),
           MomentsDishesType(imageUrl: 'Images/grillades_plats.png', slug: ''),
@@ -73,8 +73,8 @@ class MomentsDishesType extends StatelessWidget {
                   child: Image.asset(
                     //'assets/images/topmenu/' + imageUrl + '.png',
                     imageUrl,
-                    width: 24,
-                    height: 24,
+                    width: 47,
+                    height: 47,
                   ),
                 ),
               ),

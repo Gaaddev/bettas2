@@ -30,7 +30,7 @@ class SocialPage extends StatelessWidget {
             DelayedAnimation(
               delay: 1000,
               child: Container(
-                height: 200,
+                height: 250,
                 child: Image.asset('serveur.png'),
               ),
             ),
@@ -171,7 +171,7 @@ class SocialPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 10,),
                   ],
                 ),
               ),

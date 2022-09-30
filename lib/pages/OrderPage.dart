@@ -11,8 +11,7 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
+        body: Row(
           children: [
             Card(
               child: Align(
@@ -29,7 +28,6 @@ class _OrderPageState extends State<OrderPage> {
             ),
           ],
         ),
-      ),
     );
   }
 }
