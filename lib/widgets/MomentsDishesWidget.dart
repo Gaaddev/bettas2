@@ -81,7 +81,7 @@ class MomentsDishesModels extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
-                      'Breakfast',
+                      'Tasted',
                       style: GoogleFonts.poppins(
                         color: Colors.black45,
                         fontSize: 20,

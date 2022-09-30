@@ -93,10 +93,10 @@ class SocialPage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.mail_outline_outlined),
+                            Icon(Icons.login),
                             SizedBox(width: 10,),
                             Text(
-                              'EMAIL',
+                              'IDENTITY',
                               style: GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 16,
@@ -107,71 +107,14 @@ class SocialPage extends StatelessWidget {
                         ),
                     ),
                     SizedBox(height: 20,),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => LogPage(),
-                          ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                          shape: StadiumBorder(),
-                          primary: Color(0xFF576dff),
-                          padding: EdgeInsets.all(13)
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FaIcon(FontAwesomeIcons.facebook),
-                          SizedBox(width: 10,),
-                          Text(
-                            'FACEBOOK',
-                            style: GoogleFonts.poppins(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                          ),
-                          ),
-                        ],
+                    Text(
+                      'Touch here !',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.poppins(
+                        color: Colors.grey,
+                        fontSize: 16,
                       ),
                     ),
-                    SizedBox(height: 20,),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => LogPage(),
-                          ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                          shape: StadiumBorder(),
-                          primary: Colors.white,
-                          padding: EdgeInsets.all(13)
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                              'G_google_image.png',
-                              height: 20
-                          ),
-                          SizedBox(width: 10,),
-                          Text(
-                            'GOOGLE',
-                            style: GoogleFonts.poppins(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                          ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 10,),
                   ],
                 ),
               ),

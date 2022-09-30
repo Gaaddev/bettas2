@@ -31,7 +31,7 @@ class LogPage extends StatelessWidget {
           children: [
             Container(
                   margin: const EdgeInsets.symmetric(
-                    vertical: 40,
+                    vertical: 20,
                     horizontal: 30,
                   ),
                   child: Column(
@@ -40,7 +40,7 @@ class LogPage extends StatelessWidget {
                       DelayedAnimation(
                         delay: 1500,
                         child: Text(
-                          'Connect email address',
+                          'Complete your identity',
                           style: GoogleFonts.poppins(
                             color: d_oronge,
                             fontSize: 25,
@@ -52,7 +52,7 @@ class LogPage extends StatelessWidget {
                       DelayedAnimation(
                         delay: 2500,
                         child: Text(
-                          'It\'s recommended to connect your email address for us to better protect you information.',
+                          'It\'s recommended to fill in the lines below for us to better protect you information.',
                           textAlign: TextAlign.start,
                           style: GoogleFonts.poppins(
                             color: Colors.grey,
@@ -65,11 +65,11 @@ class LogPage extends StatelessWidget {
                   ),
                 ),
             SizedBox(
-              height: 35,
+              height: 5,
             ),
             LoginForm(),
             SizedBox(
-              height: 125,
+              height: 40,
             ),
             DelayedAnimation(
               delay: 5500,
@@ -100,7 +100,7 @@ class LogPage extends StatelessWidget {
                             ),
                       ),
                     ),
-                    SizedBox(height: 90,),
+                    SizedBox(height: 20,),
                     Align(
                       alignment: Alignment.centerRight,
                       child: Padding(
@@ -151,7 +151,7 @@ class _LoginFormState extends State<LoginForm> {
               delay: 3500,
               child: TextField(
                 decoration: InputDecoration(
-                  labelText: 'Your Email',
+                  labelText: 'Your Name',
                   labelStyle: TextStyle(
                     color: Colors.grey[400],
                   ),
@@ -159,17 +159,45 @@ class _LoginFormState extends State<LoginForm> {
               ),
       ),
                   SizedBox(
-                    height: 30,
+                    height: 25,
                   ),
+          DelayedAnimation(
+            delay: 4000,
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: 'Your First names',
+                labelStyle: TextStyle(
+                  color: Colors.grey[400],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          DelayedAnimation(
+            delay: 4500,
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: 'Your Class',
+                labelStyle: TextStyle(
+                  color: Colors.grey[400],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
       DelayedAnimation(
-        delay: 4500,
+        delay: 5000,
         child: TextField(
           obscureText: _obscureText,
           decoration: InputDecoration(
           labelStyle: TextStyle(
             color: Colors.grey[400],
           ),
-                  labelText: 'Password',
+                  labelText: 'Create Your Password',
                   suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -178,11 +206,37 @@ class _LoginFormState extends State<LoginForm> {
                       },
                       icon: Icon(
                         Icons.visibility,
-                        color: Colors.black,
+                        color: Colors.deepOrangeAccent,
                       )
                   ),
                 ),
               ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          DelayedAnimation(
+            delay: 5500,
+            child: TextField(
+              obscureText: _obscureText,
+              decoration: InputDecoration(
+                labelStyle: TextStyle(
+                  color: Colors.grey[400],
+                ),
+                labelText: 'Repeat Your Password',
+                suffixIcon: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        _obscureText = !_obscureText;
+                      });
+                    },
+                    icon: Icon(
+                      Icons.visibility,
+                      color: Colors.deepOrangeAccent,
+                    )
+                ),
+              ),
+            ),
           ),
         ],
       ),
