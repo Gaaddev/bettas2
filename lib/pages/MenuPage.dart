@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:bettas/widgets/DayMenuType.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({Key? key}) : super(key: key);
@@ -10,49 +12,28 @@ class MenuPage extends StatefulWidget {
 class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-         const Padding(
-           padding: EdgeInsets.only(top: 20.0),
-            child:
-        Center(
-          child: Text(
-              'Menu de la Semaine',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        )
-        ),
-        Container(),
-        const BottomMenu(),
-      ],
-    );
-  }
-}
-
-class BottomMenu extends StatelessWidget {
-  const BottomMenu({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Align(
-            alignment: Alignment(0.0, 1.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.all(
-                Radius.circular(30),
+    return Scaffold(
+      backgroundColor: Colors.amberAccent,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Center(
+              child: Text(
+                'Menu de la Semaine',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              child: Row(),
+            )
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+            child: Container(
+              color: Colors.cyanAccent,
+                  child: DayMenuType(),
             ),
           ),
-        ),
-      ],
     );
   }
 }
+

@@ -48,10 +48,10 @@ class SelectCard extends StatelessWidget {
               Radius.circular(15.0),
             ),
           ),
-          color: Colors.orange,
+          color: Colors.amberAccent,
           child: Center(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 //Text(days.dayName, style: textStyle),
               TextButton(
@@ -77,28 +77,69 @@ class SelectCard extends StatelessWidget {
                   height: 6,
                 ),
                 Container(
-                  color: Colors.indigoAccent,
+                  //color: Colors.indigoAccent,
                   padding: const EdgeInsets.only(
                       left: 5,
                       right: 5,
                   ),
                   child: Card(
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                    ),
+                  //  shape: const RoundedRectangleBorder(
+                  //    borderRadius: BorderRadius.all(
+                  //      Radius.circular(5.0),
+                  //    ),
+                  //  ),
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      //crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Container(
                           child: Center(
-                            child: Image.asset('lunchs.png'),
+                            child: Image.asset('lunchs.png',
+                            height: 40,
+                              width: 50,
+                            ),
                           ),
+                        ),
+                        SizedBox(
+                          width: 50,
                         ),
                         Container(
                           child: Center(
                             child: Text('Tasted'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  //color: Colors.indigoAccent,
+                  padding: const EdgeInsets.only(
+                    left: 5,
+                    right: 5,
+                  ),
+                  child: Card(
+                    //  shape: const RoundedRectangleBorder(
+                    //    borderRadius: BorderRadius.all(
+                    //      Radius.circular(5.0),
+                    //    ),
+                    //  ),
+                    child: Row(
+                      //crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Container(
+                          child: Center(
+                            child: Image.asset('tasted.png',
+                              height: 45,
+                              width: 50,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 50,
+                        ),
+                        Container(
+                          child: Center(
+                            child: Text('Lunch'),
                           ),
                         ),
                       ],

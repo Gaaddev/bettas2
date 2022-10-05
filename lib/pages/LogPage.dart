@@ -37,9 +37,10 @@ class LogPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      DelayedAnimation(
-                        delay: 1500,
-                        child: Text(
+                     // DelayedAnimation(
+                      //  delay: 1500,
+                      //  child:
+                        Text(
                           'Complete your identity',
                           style: GoogleFonts.poppins(
                             color: d_oronge,
@@ -47,11 +48,12 @@ class LogPage extends StatelessWidget {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                      ),
+                      //),
                       SizedBox(height: 22,),
-                      DelayedAnimation(
-                        delay: 2500,
-                        child: Text(
+                     // DelayedAnimation(
+                     //   delay: 2500,
+                     //   child:
+                        Text(
                           'It\'s recommended to fill in the lines below for us to better protect you information.',
                           textAlign: TextAlign.start,
                           style: GoogleFonts.poppins(
@@ -60,7 +62,7 @@ class LogPage extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                      ),
+                     // ),
                     ],
                   ),
                 ),
@@ -71,9 +73,10 @@ class LogPage extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            DelayedAnimation(
-              delay: 5500,
-              child: ElevatedButton(
+           // DelayedAnimation(
+           //   delay: 5500,
+           //   child:
+              ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -99,7 +102,7 @@ class LogPage extends StatelessWidget {
                               ),
                             ),
                       ),
-                    ),
+              //      ),
                     SizedBox(height: 20,),
                     Align(
                       alignment: Alignment.centerRight,
@@ -110,9 +113,11 @@ class LogPage extends StatelessWidget {
                         child: TextButton(
                             onPressed: () {
                               Navigator.pop(context);
-                            }, child: DelayedAnimation(
-                          delay: 6500,
-                          child: Text(
+                            }, child:
+                    //    DelayedAnimation(
+                    //      delay: 6500,
+                    //      child:
+                              Text(
                             'SKIP',
                             style: GoogleFonts.poppins(
                               color: Colors.black,
@@ -123,7 +128,7 @@ class LogPage extends StatelessWidget {
                         ),
                         ),
                       ),
-                    ),
+                    //),
                   ],
                 ),
               ),
@@ -147,51 +152,55 @@ class _LoginFormState extends State<LoginForm> {
       ),
       child: Column(
         children: [
-          DelayedAnimation(
-              delay: 3500,
-              child: TextField(
+      //    DelayedAnimation(
+      //        delay: 3500,
+      //        child:
+          TextField(
                 decoration: InputDecoration(
                   labelText: 'Your Name',
                   labelStyle: TextStyle(
                     color: Colors.grey[400],
                   ),
                 ),
-              ),
+        //      ),
       ),
                   SizedBox(
                     height: 25,
                   ),
-          DelayedAnimation(
-            delay: 4000,
-            child: TextField(
+      //    DelayedAnimation(
+      //      delay: 4000,
+      //      child:
+                  TextField(
               decoration: InputDecoration(
                 labelText: 'Your First names',
                 labelStyle: TextStyle(
                   color: Colors.grey[400],
                 ),
               ),
-            ),
+      //      ),
           ),
           SizedBox(
             height: 25,
           ),
-          DelayedAnimation(
-            delay: 4500,
-            child: TextField(
+      //    DelayedAnimation(
+      //      delay: 4500,
+      //      child:
+            TextField(
               decoration: InputDecoration(
                 labelText: 'Your Class',
                 labelStyle: TextStyle(
                   color: Colors.grey[400],
                 ),
               ),
-            ),
+      //      ),
           ),
           SizedBox(
             height: 25,
           ),
-      DelayedAnimation(
-        delay: 5000,
-        child: TextField(
+      //DelayedAnimation(
+      //  delay: 5000,
+      //  child:
+        TextField(
           obscureText: _obscureText,
           decoration: InputDecoration(
           labelStyle: TextStyle(
@@ -210,14 +219,15 @@ class _LoginFormState extends State<LoginForm> {
                       )
                   ),
                 ),
-              ),
+      //        ),
           ),
           SizedBox(
             height: 25,
           ),
-          DelayedAnimation(
-            delay: 5500,
-            child: TextField(
+      //    DelayedAnimation(
+      //      delay: 5500,
+      //      child:
+          TextField(
               obscureText: _obscureText,
               decoration: InputDecoration(
                 labelStyle: TextStyle(
@@ -237,7 +247,7 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ),
             ),
-          ),
+        //  ),
         ],
       ),
     );

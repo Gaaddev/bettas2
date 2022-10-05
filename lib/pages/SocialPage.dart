@@ -27,16 +27,18 @@ class SocialPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            DelayedAnimation(
-              delay: 1000,
-              child: Container(
+        //    DelayedAnimation(
+        //      delay: 1000,
+        //      child:
+              Container(
                 height: 250,
                 child: Image.asset('serveur.png'),
               ),
-            ),
-            DelayedAnimation(
-              delay: 1000,
-              child: Container(
+        //    ),
+        //    DelayedAnimation(
+        //      delay: 1000,
+        //      child:
+              Container(
                 height: 200,
                 child: Container(
                   margin: const EdgeInsets.symmetric(
@@ -65,11 +67,12 @@ class SocialPage extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
+        //      ),
             ),
-            DelayedAnimation(
-              delay: 3500,
-              child: Container(
+        //    DelayedAnimation(
+        //      delay: 3500,
+        //      child:
+                Container(
                 margin: EdgeInsets.symmetric(
                   vertical: 14,
                   horizontal: 40,
@@ -118,7 +121,7 @@ class SocialPage extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
+        //    ),
           ],
         ),
       ),
