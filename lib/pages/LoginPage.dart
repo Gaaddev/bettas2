@@ -12,6 +12,12 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return WelcomePage();
+    return Container(
+      color: Colors.amberAccent,
+      child: const Center(
+
+        child: Text('Profil'),
+      ),
+    );
   }
 }

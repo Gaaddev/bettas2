@@ -13,26 +13,20 @@ class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amberAccent,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Center(
-              child: Text(
-                'Menu de la Semaine',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            )
-      ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-            child: Container(
-              color: Colors.cyanAccent,
-                  child: DayMenuType(),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 22,
             ),
-          ),
+            Container(
+              height: 725,
+                  child: const DayMenuType(),
+                ),
+          ],
+        ),
+      ),
     );
   }
 }

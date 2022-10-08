@@ -1,3 +1,4 @@
+import 'package:bettas/pages/Welcome_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:bettas/pages/LoginPage.dart';
 
@@ -13,5 +14,5 @@ void main() => runApp(MaterialApp(
         ),
         textTheme: const TextTheme(bodyText2: TextStyle(color: Colors.black)),
       ),
-      home: const LoginPage(),
+      home: WelcomePage(),
     ));

@@ -17,7 +17,6 @@ class _StartPageState extends State<StartPage> {
   static const List<Widget> _tabList = <Widget>[
     HomePage(),
     MenuPage(),
-    ChatPage(),
     LoginPage(),
     OrderPage(),
   ];
@@ -60,10 +59,10 @@ class _StartPageState extends State<StartPage> {
             icon: Icon(Icons.apps),
             label: 'Menu',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Info',
-          ),
+      //    BottomNavigationBarItem(
+      //      icon: Icon(Icons.chat),
+      //      label: 'Info',
+      //    ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Login',

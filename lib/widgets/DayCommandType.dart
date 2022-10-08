@@ -32,7 +32,7 @@ const List<Day> days = const <Day> [
   const Day(dayName: 'Mardi',),
   const Day(dayName: 'Mercredi',),
   const Day(dayName: 'Jeudi',),
-  const Day(dayName: 'Vendredii',),
+  const Day(dayName: 'Vendredi',),
 ];
 class SelectCard extends StatelessWidget {
    SelectCard({Key? key, required this.days}) : super(key: key);
