@@ -114,6 +114,10 @@ class SelectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextStyle? textStyle = Theme.of(context).textTheme.headline5;
     return Container(
+      margin: const EdgeInsets.only(
+        left: 10,
+        right: 10,
+      ),
       color: Colors.white70,
       child: Center(
         child: Column(
@@ -150,7 +154,8 @@ class SelectCard extends StatelessWidget {
                       color: Colors.transparent,
                       elevation: 0,
                       child: Image.asset(
-                        'ayimolou.png',
+                        typeDays.imageUrl.toString(),
+                       // 'ayimolou.png',
                         height: 200,
                         width: 150,
                       ),
@@ -179,7 +184,8 @@ class SelectCard extends StatelessWidget {
                       color: Colors.transparent,
                       elevation: 0,
                       child: Image.asset(
-                        'Kom.jpg',
+                        typeDays.imageUrl2.toString(),
+                     //   'Kom.jpg',
                         height: 200,
                         width: 150,
                       ),
