@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:bettas/pages/Welcome_Page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'LogPage.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -14,12 +16,13 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Container(
         color: Colors.white,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            const SizedBox(
+              height: 40,
+            ),
             Container(
               margin: const EdgeInsets.only(
                 top: 5,
@@ -114,14 +117,240 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-            Container(
-              child: const Text('Enc cours'),
+            const SizedBox(
+              height: 30,
             ),
             Container(
-              child: const Text('Enc cours'),
+              padding: const EdgeInsets.only(
+                left: 75,
+                right: 75,
+                top: 10,
+                bottom: 10,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    child: const Card(
+                      child: Icon(Icons.credit_card,
+                      size: 70,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(5),
+                    child: Text(
+                      'Payment Methods',
+                      style: GoogleFonts.poppins(
+                        color: Colors.orange,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 40,
             ),
             Container(
-              child: const Text('Enc cours'),
+              child: Column(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(
+                      left: 5,
+                      right: 5,
+                    ),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //    Navigator.push(
+                        //      context,
+                        //      MaterialPageRoute(
+                        //        builder: (context) => const (),
+                        //      ),
+                        //    );
+                      },
+                      style: ElevatedButton.styleFrom(
+                          shape: const StadiumBorder(),
+                          primary: Colors.black26,
+                          padding: const EdgeInsets.all(2)),
+                      child: Row(
+                        //  mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(Icons.keyboard_return_rounded),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'My Orders',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(
+                      left: 5,
+                      right: 5,
+                    ),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //    Navigator.push(
+                        //      context,
+                        //      MaterialPageRoute(
+                        //        builder: (context) => const (),
+                        //      ),
+                        //    );
+                      },
+                      style: ElevatedButton.styleFrom(
+                          shape: const StadiumBorder(),
+                          primary: Colors.black26,
+                          padding: const EdgeInsets.all(2)),
+                      child: Row(
+                        //  mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(Icons.percent),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'My Coupons',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(
+                      left: 5,
+                      right: 5,
+                    ),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //    Navigator.push(
+                        //      context,
+                        //      MaterialPageRoute(
+                        //        builder: (context) => const (),
+                        //      ),
+                        //    );
+                      },
+                      style: ElevatedButton.styleFrom(
+                          shape: const StadiumBorder(),
+                          primary: Colors.black26,
+                          padding: const EdgeInsets.all(2)),
+                      child: Row(
+                        //  mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(Icons.mail),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'My Notifications',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(
+                      left: 5,
+                      right: 5,
+                    ),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //    Navigator.push(
+                        //      context,
+                        //      MaterialPageRoute(
+                        //        builder: (context) => const (),
+                        //      ),
+                        //    );
+                      },
+                      style: ElevatedButton.styleFrom(
+                          shape: const StadiumBorder(),
+                          primary: Colors.black26,
+                          padding: const EdgeInsets.all(2)),
+                      child: Row(
+                        //  mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(Icons.settings),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'My Settings',
+                            style: GoogleFonts.poppins(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 80,
+            ),
+            Container(
+              margin: const EdgeInsets.only(
+                left: 40,
+                right: 40,
+              ),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LogPage(),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                    shape: const StadiumBorder(),
+                    primary: d_oronge,
+                    padding: const EdgeInsets.all(13)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.logout),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'Logout',
+                      style: GoogleFonts.poppins(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
