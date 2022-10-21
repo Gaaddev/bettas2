@@ -41,8 +41,8 @@ class MomentsDishesModels extends StatelessWidget {
       },
       child: SingleChildScrollView(
         child: Container(
-          height: 580,
-          margin: EdgeInsets.symmetric(
+          height: 620,
+          margin: const EdgeInsets.symmetric(
             vertical: 5,
             horizontal: 2,
           ),
@@ -58,15 +58,15 @@ class MomentsDishesModels extends StatelessWidget {
                 height: 250,
                 padding: const EdgeInsets.all(3.0),
                 child: Card(
-                  color: Colors.white54,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: const BorderRadius.all(
+                  color: Colors.black,
+                  elevation: 5,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
                       Radius.circular(7),
                     ),
                   ),
                   child: Image.asset(
-                    'Kom.jpg',
+                    'kom.png',
                   ),
                 ),
               ),
@@ -88,7 +88,7 @@ class MomentsDishesModels extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                       width: 110,
                     ),
@@ -136,13 +136,13 @@ class MomentsDishesModels extends StatelessWidget {
               ),
               Container(
                 width: 350,
-                height: 200,
+                height: 250,
                 padding: const EdgeInsets.all(3.0),
                 child: Card(
-                  color: Colors.white54,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: const BorderRadius.all(
+                  color: Colors.black,
+                  elevation: 5,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
                       Radius.circular(7),
                     ),
                   ),
@@ -165,7 +165,7 @@ class MomentsDishesWidgetTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: 10,
         right: 10,
         top: 5,

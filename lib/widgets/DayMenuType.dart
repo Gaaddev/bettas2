@@ -11,7 +11,7 @@ class DayMenuType extends StatelessWidget {
         crossAxisCount: 1,
         crossAxisSpacing: 4.0,
         mainAxisSpacing: 8.0,
-        mainAxisExtent: 600,
+        mainAxisExtent: 510,
       ),
       children: List.generate(typeDays.length, (index) {
         return SelectCard(typeDays: typeDays[index]);
@@ -45,36 +45,36 @@ class TypeDay {
 
 const List<TypeDay> typeDays = <TypeDay>[
   TypeDay(
-    imageUrl: 'ayimolou.png',
+    imageUrl: 'kom.png',
     dayName: 'Lundi',
     foodType: 'Lunch',
-    foodName: 'Ayimolou',
+    foodName: 'Kom',
     foodDescription:
-        'Special food composed by\n bean and rice.\n Very sweet ! ',
+        'Special food composed \n by meal.\n Delicious ! ',
     imageUrl2: 'croissant.png',
     foodName2: 'Croissant',
     foodType2: 'Tasted',
     foodDescription2: 'Like a bread !',
   ),
   TypeDay(
-    imageUrl: 'ayimolou.png',
+    imageUrl: 'Images/jollof_rice.png',
     dayName: 'Mardi',
-    foodType: 'Tasted',
-    foodName: 'Ayimolou',
+    foodType: 'Lunch',
+    foodName: 'Jollof Rice',
     foodDescription:
-        'Special food composed by\n bean and rice.\n Very sweet ! ',
-    imageUrl2: 'croissant.png',
-    foodName2: 'Croissant',
-    foodType2: 'Lunch',
-    foodDescription2: 'Like a bread !',
+        'Special food composed \n by rice.\n muah ! ',
+    imageUrl2: 'Images/aloko.png',
+    foodName2: 'Aloko',
+    foodType2: 'Tasted',
+    foodDescription2: 'Sweet delicious !',
   ),
   TypeDay(
-    imageUrl: 'ayimolou.png',
+    imageUrl: 'Images/atieke_poisson.png',
     dayName: 'Mercredi',
     foodType: 'Lunch',
-    foodName: 'Ayimolou',
+    foodName: 'Atieke',
     foodDescription:
-        'Special food composed by\n bean and rice.\n Very sweet ! ',
+        'African meal food \n with fish.\n Very sweet ! ',
     imageUrl2: 'croissant.png',
     foodName2: 'Croissant',
     foodType2: 'Tasted',
@@ -86,19 +86,19 @@ const List<TypeDay> typeDays = <TypeDay>[
     foodType: 'Lunch',
     foodName: 'Ayimolou',
     foodDescription:
-        'Special food composed by\n bean and rice.\n Very sweet ! ',
+        'Special food composed \n by bean and rice.\n Very sweet ! ',
     imageUrl2: 'croissant.png',
     foodName2: 'Croissant',
     foodType2: 'Tasted',
     foodDescription2: 'Like a bread !',
   ),
   TypeDay(
-    imageUrl: 'ayimolou.png',
+    imageUrl: 'Images/grillades_plats.png',
     dayName: 'Vendredi',
     foodType: 'Lunch',
-    foodName: 'Ayimolou',
+    foodName: 'Special Meat',
     foodDescription:
-        'Special food composed by\n bean and rice.\n Very sweet ! ',
+        'Special food composed \n by a lot of meat.\n Ewooo ! ',
     imageUrl2: 'croissant.png',
     foodName2: 'Croissant',
     foodType2: 'Tasted',
@@ -118,7 +118,10 @@ class SelectCard extends StatelessWidget {
         left: 10,
         right: 10,
       ),
-      color: Colors.white70,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.black12,
+      ),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -127,9 +130,7 @@ class SelectCard extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Padding(
-                padding: const EdgeInsets.only(
-                  right: 35,
-                ),
+                padding: const EdgeInsets.all(2),
                 child: Text(
                   typeDays.dayName,
                   style: GoogleFonts.poppins(
@@ -140,64 +141,83 @@ class SelectCard extends StatelessWidget {
                 ),
               ),
             ),
+            const Divider(),
             const SizedBox(
-              height: 25,
+              height: 1,
             ),
-            Container(
-              color: Colors.amberAccent,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: Card(
-                      color: Colors.transparent,
-                      elevation: 0,
-                      child: Image.asset(
-                        typeDays.imageUrl.toString(),
-                       // 'ayimolou.png',
-                        height: 200,
-                        width: 150,
+            Card(
+              elevation: 10,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15.0),
+                ),
+              ),
+            //  color: Colors.deepOrangeAccent,
+              child: Padding(
+                padding: const EdgeInsets.only( left: 30, right: 30,),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                          "${typeDays.foodType2}  :  ${typeDays.foodName2}\n \n ${typeDays.foodDescription2}"
                       ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      "${typeDays.foodType}  :  ${typeDays.foodName}\n \n ${typeDays.foodDescription}"
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: Card(
+                        color: Colors.transparent,
+                        elevation: 0,
+                        child: Image.asset(
+                          typeDays.imageUrl2.toString(),
+                       //   'Kom.jpg',
+                          height: 200,
+                          width: 150,
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            SizedBox(
-              height: 50,
+            const SizedBox(
+              height: 8,
             ),
-            Container(
-              color: Colors.deepOrangeAccent,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: Card(
-                      color: Colors.transparent,
-                      elevation: 0,
-                      child: Image.asset(
-                        typeDays.imageUrl2.toString(),
-                     //   'Kom.jpg',
-                        height: 200,
-                        width: 150,
+            Card(
+              elevation: 10,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15.0),
+                ),
+              ),
+              color: Colors.amberAccent,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: Card(
+                        color: Colors.transparent,
+                        elevation: 0,
+                        child: Image.asset(
+                          typeDays.imageUrl.toString(),
+                          // 'ayimolou.png',
+                          height: 200,
+                          width: 150,
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                        "${typeDays.foodType2}  :  ${typeDays.foodName2}\n \n ${typeDays.foodDescription2}"
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                          " ${typeDays.foodType}  :  ${typeDays.foodName}\n \n ${typeDays.foodDescription}"
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],

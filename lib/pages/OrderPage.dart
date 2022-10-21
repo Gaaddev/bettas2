@@ -14,20 +14,24 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       body: SingleChildScrollView (
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
-            Container(
-              padding: const EdgeInsets.all(8),
-              height: 645,
-                child: DayCommandType()
-            ),
-            SizedBox(
-              height: 25,
+               Container(
+                 decoration: const BoxDecoration(
+                   color: Colors.transparent,
+                 ),
+                padding: const EdgeInsets.all(8),
+                height: 670,
+                    child: DayCommandType(),
+              ),
+            const SizedBox(
+              height: 5,
             ), ElevatedButton(
               onPressed: () {
                 //   Navigator.push(
@@ -38,9 +42,9 @@ class _OrderPageState extends State<OrderPage> {
                 //   );
               },
               style: ElevatedButton.styleFrom(
-                shape: StadiumBorder(),
+                shape: const StadiumBorder(),
                 primary: d_oronge,
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 125,
                   vertical: 13,
                 ),
