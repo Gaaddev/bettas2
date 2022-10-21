@@ -18,25 +18,24 @@ class _OrderPageState extends State<OrderPage> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            SizedBox(
-              height: 40,
+            const SizedBox(
+              height: 20,
             ),
             Container(
-              padding: EdgeInsets.all(10),
-              height: 590,
+              padding: const EdgeInsets.all(8),
+              height: 645,
                 child: DayCommandType()
             ),
             SizedBox(
-              height: 60,
-            ),
-            ElevatedButton(
+              height: 25,
+            ), ElevatedButton(
               onPressed: () {
-             //   Navigator.push(
-             //     context,
-             //     MaterialPageRoute(
-             //       builder: (context) => (),
-             //     ),
-             //   );
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) => (),
+                //     ),
+                //   );
               },
               style: ElevatedButton.styleFrom(
                 shape: StadiumBorder(),
